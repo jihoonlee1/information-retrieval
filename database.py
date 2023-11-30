@@ -39,6 +39,40 @@ CREATE TABLE IF NOT EXISTS pdf_page_prefilter_temp(
 	response TEXT    NOT NULL,
 	PRIMARY KEY(pdf_id, page)
 )
+""",
+"""
+CREATE TABLE IF NOT EXISTS pdf_page_prefilter(
+	pdf_id INTEGER NOT NULL,
+	page   INTEGER NOT NULL,
+	key    TEXT    NOT NULL,
+	PRIMARY KEY(pdf_id, page, key)
+)
+""",
+"""
+CREATE TABLE IF NOT EXISTS pdf_total_temp(
+	pdf_id   INTEGER NOT NULL,
+	key      TEXT    NOT NULL,
+	response TEXT    NOT NULL,
+	PRIMARY KEY(pdf_id, key)
+)
+""",
+"""
+CREATE TABLE IF NOT EXISTS pdf_total(
+	pdf_id           INTEGER NOT NULL,
+	key              TEXT    NOT NULL,
+	page_found_where INTEGER NOT NULL,
+	amount           INTEGER NOT NULL,
+	PRIMARY KEY(pdf_id, key)
+)
+""",
+"""
+CREATE TABLE IF NOT EXISTS pdf_key_activity_temp(
+	pdf_id        INTEGER NOT NULL,
+	key           TEXT NOT NULL,
+	activity_name TEXT NOT NULL,
+	response      TEXT NOT NULL,
+	PRIMARY KEY(pdf_id, key, activity_name)
+)
 """
 ]
 

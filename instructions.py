@@ -1,15 +1,21 @@
 def page_prefilter(content):
 	question = f"""
 Task:
-Analyze the given image to determine if it contains a detailed breakdown of financial information with actual monetary values (e.g., $15,123,123) of Acciona's revenue (turnover), capital expenditure (CapEx), or operational expenditure (OpEx).
+Analyze the given image to determine if it contains financial information of Acciona's revenue (turnover), capital expenditure (CapEx), or operational expenditure (OpEx).
 
 Instructions:
-1. If the image does not contain a detailed breakdown of financial information with actual monetary values (e.g., $15,123,123), respond with [NONE].
-2. Otherwise, indicate which values are displayed on the image using the Available Keywords.
-Available Keywords:
-revenue
-capital_expenditure
-operational_expenditure
+1. Determine if the image contains the amount of total revenue (turnover).
+2. Determine if the image contains the name of business activity and its contribution amount towards revenue (turnover).
+3. Determine if the image contains the amount of total capital expenditure (CapEx).
+4. Determine if the image contains the name of business activity and its contribution amount towards capital expenditure (CapEx).
+5. Determine if the image contains the amount of total operational expenditure (OpEx).
+6. Determine if the image contains the name of business activity and its contribution amount towards operational expenditure (OpEx).
+7. If none of things from instrctions 1~6 is true, respond with [NONE].
+8. Otherwise, use the following Available Keys to output the result:
+Available Keys:
+revenue (if Instruction 1, or Instruction 2 is true)
+capital_expenditure (if Instruction 3, or Instruction 4 is true)
+operational_expenditure (if Instruction 5, or Instruction 6 is true)
 
 Example outputs:
 Example 1: [NONE]
@@ -38,10 +44,10 @@ Instructions:
 3. Clearly specify which image provides the final result.
 
 Example outputs:
-Example 1) [IMAGE 9; 12941299]
-Example 2) [IMAGE 1; 49000512]
-Example 3) [IMAGE 3; 52412681]
-Example 4) [IMAGE 2; 9412231]
+Example 1: [IMAGE 9; 12941299]
+Example 2: [IMAGE 1; 49000512]
+Example 3: [IMAGE 3; 52412681]
+Example 4: [IMAGE 2; 9412231]
 
 The images may be unclear. The textual contents are as follows; marked with IMAGE#:
 {contents}
@@ -60,10 +66,10 @@ Instructions:
 3. Clearly specify which image provides the final result.
 
 Example outputs:
-Example 1) [IMAGE 9; 12941299]
-Example 2) [IMAGE 1; 49000512]
-Example 3) [IMAGE 3; 52412681]
-Example 4) [IMAGE 2; 9412231]
+Example 1: [IMAGE 9; 12941299]
+Example 2: [IMAGE 1; 49000512]
+Example 3: [IMAGE 3; 52412681]
+Example 4: [IMAGE 2; 9412231]
 
 The images may be unclear. The textual contents are as follows; marked with IMAGE#:
 {contents}
@@ -82,10 +88,10 @@ Instructions:
 3. Clearly specify which image provides the final result.
 
 Example outputs:
-Example 1) [IMAGE 9; 12941299]
-Example 2) [IMAGE 1; 49000512]
-Example 3) [IMAGE 3; 52412681]
-Example 4) [IMAGE 2; 9412231]
+Example 1: [IMAGE 9; 12941299]
+Example 2: [IMAGE 1; 49000512]
+Example 3: [IMAGE 3; 52412681]
+Example 4: [IMAGE 2; 9412231]
 
 The images may be unclear. The textual contents are as follows; marked with IMAGE#:
 {contents}
@@ -93,7 +99,7 @@ The images may be unclear. The textual contents are as follows; marked with IMAG
 	return question
 
 
-def revenue_activities(activity_scope, activity_inclusions, activity_exclusions, contents):
+def revenue_activities(activity_description, activity_inclusions, activity_exclusions, contents):
 	question = f"""
 Task:
 Analyze each of the provided images, find all the relevant business activities that contributed to Acciona's total revenue (turnover).
@@ -101,7 +107,7 @@ Analyze each of the provided images, find all the relevant business activities t
 Instructions:
 1. Some relevant activities may have a duplicate name with different contribution amount. You MUST KEEP all (they are not duplicates). Find relevant activities that aligns with the given Activity Scope, and Activity Inclusions.
 Activity Scope:
-{activity_scope}
+{activity_description}
 Activity Inclusions:
 {activity_inclusions}
 
@@ -124,7 +130,7 @@ The images may be unclear. The textual contents are as follows; marked with IMAG
 	return question
 
 
-def capital_expenditure_activities(activity_scope, activity_inclusions, activity_exclusions, contents):
+def capital_expenditure_activities(activity_description, activity_inclusions, activity_exclusions, contents):
 	question = f"""
 Task:
 Analyze each of the provided images, find all the relevant business activities that contributed to Acciona's total capital expenditure (CapEx).
@@ -132,7 +138,7 @@ Analyze each of the provided images, find all the relevant business activities t
 Instructions:
 1. Some relevant activities may have a duplicate name with different contribution amount. You MUST KEEP all (they are not duplicates). Find relevant activities that aligns with the given Activity Scope, and Activity Inclusions.
 Activity Scope:
-{activity_scope}
+{activity_description}
 Activity Inclusions:
 {activity_inclusions}
 
@@ -155,7 +161,7 @@ The images may be unclear. The textual contents are as follows; marked with IMAG
 	return question
 
 
-def operational_expenditure_activities(activity_scope, activity_inclusions, activity_exclusions, contents):
+def operational_expenditure_activities(activity_description, activity_inclusions, activity_exclusions, contents):
 	question = f"""
 Task:
 Analyze each of the provided images, find all the relevant business activities that contributed to Acciona's total operational expenditure (OpEx).
@@ -163,7 +169,7 @@ Analyze each of the provided images, find all the relevant business activities t
 Instructions:
 1. Some relevant activities may have a duplicate name with different contribution amount. You MUST KEEP all (they are not duplicates). Find relevant activities that aligns with the given Activity Scope, and Activity Inclusions.
 Activity Scope:
-{activity_scope}
+{activity_description}
 Activity Inclusions:
 {activity_inclusions}
 

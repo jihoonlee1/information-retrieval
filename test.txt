@@ -1,0 +1,28 @@
+Task:
+Analyze the given image to determine if it contains financial information of Acciona's revenue (turnover), capital expenditure (CapEx), or operational expenditure (OpEx).
+
+Instructions:
+1. Determine if the image contains the amount of total revenue (turnover).
+2. Determine if the image contains the name of business activity and its contribution amount towards revenue (turnover).
+3. Determine if the image contains the amount of total capital expenditure (CapEx).
+4. Determine if the image contains the name of business activity and its contribution amount towards capital expenditure (CapEx).
+5. Determine if the image contains the amount of total operational expenditure (OpEx).
+6. Determine if the image contains the name of business activity and its contribution amount towards operational expenditure (OpEx).
+7. If none of things from instrctions 1~6 is true, respond with [NONE].
+8. Otherwise, use the following Available Keys to output the result:
+Available Keys:
+revenue (if Instruction 1, or Instruction 2 is true)
+capital_expenditure (if Instruction 3, or Instruction 4 is true)
+operational_expenditure (if Instruction 5, or Instruction 6 is true)
+
+Example outputs:
+Example 1: [NONE]
+Example 2: [revenue]
+Example 3: [capital_expenditure]
+Example 4: [operational_expenditure]
+Example 5: [revenue, operational_expenditure]
+Example 6: [revenue, capital_expenditure]
+Example 7: [capital_expenditure, operational_expenditure]
+Example 8: [revenue, capital_expenditure, operational_expenditure]
+
+The image may be unclear. The textual content is as follows:
