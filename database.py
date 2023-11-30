@@ -19,44 +19,25 @@ CREATE TABLE IF NOT EXISTS activities(
 )
 """,
 """
+CREATE TABLE IF NOT EXISTS pdfs(
+	id   INTEGER NOT NULL PRIMARY KEY,
+	name TEXT    NOT NULL
+)
+""",
+"""
 CREATE TABLE IF NOT EXISTS pdf_page_content(
-	pdf_name TEXT    NOT NULL,
-	page     INTEGER NOT NULL,
-	content  TEXT    NOT NULL,
-	PRIMARY KEY(pdf_name, page)
+	pdf_id  INTEGER NOT NULL REFERENCES pdfs(id),
+	page    INTEGER NOT NULL,
+	content TEXT    NOT NULL,
+	PRIMARY KEY(pdf_id, page)
 )
 """,
 """
 CREATE TABLE IF NOT EXISTS pdf_page_prefilter_temp(
-	pdf_name TEXT    NOT NULL,
+	pdf_id   INTEGER NOT NULL,
 	page     INTEGER NOT NULL,
 	response TEXT    NOT NULL,
-	PRIMARY KEY(pdf_name, page)
-)
-""",
-"""
-CREATE TABLE IF NOT EXISTS pdf_page_prefilter(
-	pdf_name TEXT    NOT NULL,
-	page     INTEGER NOT NULL,
-	key      TEXT    NOT NULL,
-	PRIMARY KEY(pdf_name, page, key)
-)
-""",
-"""
-CREATE TABLE IF NOT EXISTS pdf_total_temp(
-	pdf_name TEXT NOT NULL,
-	key      TEXT NOT NULL,
-	response TEXT NOT NULL,
-	PRIMARY KEY(pdf_name, key, response)
-)
-""",
-"""
-CREATE TABLE IF NOT EXISTS pdf_total(
-	pdf_name         TEXT    NOT NULL,
-	key              TEXT    NOT NULL,
-	found_page_where INTEGER NOT NULL,
-	value            REAL    NOT NULL,
-	PRIMARY KEY(pdf_name, key)
+	PRIMARY KEY(pdf_id, page)
 )
 """
 ]
