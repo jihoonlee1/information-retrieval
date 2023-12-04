@@ -5,17 +5,19 @@ import sqlite3
 statements = [
 """
 CREATE TABLE IF NOT EXISTS activity_base(
-	name        TEXT NOT NULL PRIMARY KEY,
-	description TEXT NOT NULL
+	id          INTEGER NOT NULL PRIMARY KEY,
+	name        TEXT    NOT NULL,
+	description TEXT    NOT NULL
 )
 """,
 """
 CREATE TABLE IF NOT EXISTS activities(
-	base_name   TEXT NOT NULL REFERENCES activity_base(name),
-	name        TEXT NOT NULL PRIMARY KEY,
-	description TEXT NOT NULL,
-	inclusions  TEXT NOT NULL,
-	exclusions  TEXT NOT NULL
+	id          INTEGER NOT NULL PRIMARY KEY,
+	name        TEXT    NOT NULL,
+	description TEXT    NOT NULL,
+	inclusions  TEXT    NOT NULL,
+	exclusions  TEXT    NOT NULL,
+	base_id     INTEGER NOT NULL REFERENCES activity_base(id)
 )
 """,
 """
@@ -42,14 +44,18 @@ CREATE TABLE IF NOT EXISTS pdf_page_prefilter_temp(
 """,
 """
 CREATE TABLE IF NOT EXISTS pdf_page_prefilter(
-	pdf_id INTEGER NOT NULL,
-	page   INTEGER NOT NULL,
-	key    TEXT    NOT NULL,
-	PRIMARY KEY(pdf_id, page, key)
+	id                      INTEGER NOT NULL PRIMARY KEY,
+	pdf_id                  INTEGER NOT NULL,
+	page                    INTEGER NOT NULL,
+	activity_name           TEXT    NOT NULL,
+	contribution_type       TEXT    NOT NULL,
+	amount                  INTEGER NOT NULL,
+	top_similar_activity_id INTEGER NOT NULL,
+	top_similar_score       INTEGER NOT NULL
 )
 """,
 """
-CREATE TABLE IF NOT EXISTS pdf_total_temp(
+CREATE TABLE IF NOT EXISTS pdf_key_total_temp(
 	pdf_id   INTEGER NOT NULL,
 	key      TEXT    NOT NULL,
 	response TEXT    NOT NULL,
@@ -57,21 +63,11 @@ CREATE TABLE IF NOT EXISTS pdf_total_temp(
 )
 """,
 """
-CREATE TABLE IF NOT EXISTS pdf_total(
-	pdf_id           INTEGER NOT NULL,
-	key              TEXT    NOT NULL,
-	page_found_where INTEGER NOT NULL,
-	amount           INTEGER NOT NULL,
+CREATE TABLE IF NOT EXISTS pdf_key_total(
+	pdf_id INTEGER NOT NULL,
+	key    TEXT    NOT NULL,
+	amount INTEGER NOT NULL,
 	PRIMARY KEY(pdf_id, key)
-)
-""",
-"""
-CREATE TABLE IF NOT EXISTS pdf_key_activity_temp(
-	pdf_id        INTEGER NOT NULL,
-	key           TEXT NOT NULL,
-	activity_name TEXT NOT NULL,
-	response      TEXT NOT NULL,
-	PRIMARY KEY(pdf_id, key, activity_name)
 )
 """
 ]

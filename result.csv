@@ -1,0 +1,78 @@
+activity_name;involvement_type;percentage_involvement;absolute_involvement;involvement_denominator
+Manufacture of Low Carbon Technologies for Transport;revenue;0.49001457908970936;54857613;11195098134
+Production of Electricity from Solar PV;revenue;0.9540331377322073;106804946;11195098134
+Production of Electricity from Concentrated Solar Power;revenue;0.23423733035764382;26223099;11195098134
+Production of Electricity from Wind Power;revenue;17.09621158377601;1913937664;11195098134
+Production of Electricity from Hydropower;revenue;3.5339446717171583;395628574;11195098134
+Production of Electricity from Bioenergy (Biomass, Biogas and Biofuels);revenue;0.6949288882401502;77797971;11195098134
+Transmission and Distribution of Electricity;revenue;0.05498775380364165;6155933;11195098134
+Construction, Extension and Operation of Water Collection, Treatment and Supply Systems;revenue;2.419862039237038;270905930;11195098134
+Construction, Extension and Operation of Wastewater Collection and Treatment;revenue;2.837400254985563;317649743;11195098134
+Separate Collection and Transport of Non-Hazardous Waste in Source Segregated Fractions;revenue;0.42294611832118134;47349233;11195098134
+Transport By Motorbikes, Passenger Cars and Commercial Vehicles;revenue;0.1231665666076063;13788618;11195098134
+Infrastructure for Personal Mobility, Cycle Logistics;revenue;0.006988219224483665;782338;11195098134
+Infrastructure for Rail Transport;revenue;6.94753183661552;777783007;11195098134
+Infrastructure Enabling Low Carbon Road Transport and Public Transport;revenue;7.823887468568751;875891880;11195098134
+Construction of New Buildings - Construction;revenue;5.90223194197147;660760658;11195098134
+Building Renovation;revenue;0.2625552866815093;29393322;11195098134
+Installation, Maintenance and Repair of Energy Efficiency Equipment;revenue;0.0971323598046452;10874063;11195098134
+Installation, Maintenance and Repair of Charging Stations for Electric Vehicles in Buildings (and Parking Spaces Attached to Buildings);revenue;0.0038268534573973035;428420;11195098134
+Installation, Maintenance and Repair of Renewable Energy Technologies;revenue;0.011149585158250118;1248207;11195098134
+Professional Services Related to Energy Performance of Buildings;revenue;0.5768541840992852;64579392;11195098134
+Rehabilitation & Restoration of Forests, Including Reforestation & Natural Forest Regeneration After an Extreme Event;revenue;0.006223250494643676;696699;11195098134
+Existing Forest Management;revenue;0.008693027862296004;973193;11195098134
+Renewal of Water Collection, Treatment, and Supply Systems;revenue;0.5431652520787095;60807883;11195098134
+Material Recovery from Non-Hazardous Waste;revenue;0.030021032060387653;3360884;11195098134
+Low Carbon Airport Infrastructure;revenue;0.01833447081420644;2052562;11195098134
+Acquisition and Ownership of Buildings;revenue;0.011823969599514723;1323705;11195098134
+Manufacture of Low Carbon Technologies for Transport;capital_expenditure;0.653153613035933;14199412;2173977410
+Production of Electricity from Solar PV;capital_expenditure;32.12152986447086;698314803;2173977410
+Production of Electricity from Concentrated Solar Power;capital_expenditure;2.118169939953516;46048536;2173977410
+Production of Electricity from Wind Power;capital_expenditure;26.808990669318867;582821401;2173977410
+Production of Electricity from Hydropower;capital_expenditure;0.3885088207977285;8446094;2173977410
+Production of Electricity from Bioenergy (Biomass, Biogas and Biofuels);capital_expenditure;0.03478863195731183;756297;2173977410
+Transmission and Distribution of Electricity;capital_expenditure;0.023950432861213584;520677;2173977410
+Storage of Electricity;capital_expenditure;10.586053053789552;230138402;2173977410
+Construction, Extension and Operation of Water Collection, Treatment and Supply Systems;capital_expenditure;0.45600303638849676;9913403;2173977410
+Construction, Extension and Operation of Wastewater Collection and Treatment;capital_expenditure;0.19423720690823554;4222673;2173977410
+Separate Collection and Transport of Non-Hazardous Waste in Source Segregated Fractions;capital_expenditure;0.06607989546680708;1436562;2173977410
+Transport By Motorbikes, Passenger Cars and Commercial Vehicles;capital_expenditure;0.04493629949908265;976905;2173977410
+Infrastructure for Rail Transport;capital_expenditure;0.46607135627964047;10132286;2173977410
+Infrastructure Enabling Low Carbon Road Transport and Public Transport;capital_expenditure;3.219774670979677;69997174;2173977410
+Construction of New Buildings - Construction;capital_expenditure;1.608639484436961;34971459;2173977410
+Building Renovation;capital_expenditure;1.8145239604858636;39447341;2173977410
+Installation, Maintenance and Repair of Charging Stations for Electric Vehicles in Buildings (and Parking Spaces Attached to Buildings);capital_expenditure;0.17169143445699375;3732533;2173977410
+Installation, Maintenance and Repair of Renewable Energy Technologies;capital_expenditure;0.3193507884702445;6942614;2173977410
+Professional Services Related to Energy Performance of Buildings;capital_expenditure;5.088008481192084;110612155;2173977410
+Rehabilitation & Restoration of Forests, Including Reforestation & Natural Forest Regeneration After an Extreme Event;capital_expenditure;5.648632751892302e-05;1228;2173977410
+Existing Forest Management;capital_expenditure;0.0011062672449756504;24050;2173977410
+Material Recovery from Non-Hazardous Waste;capital_expenditure;0.01047996170300592;227832;2173977410
+Acquisition and Ownership of Buildings;capital_expenditure;0.011084199812361436;240968;2173977410
+Close to Market Research, Development, and Innovation;capital_expenditure;0.08759281449939262;1904248;2173977410
+Manufacture of Low Carbon Technologies for Transport;operational_expenditure;0.12971837510777864;504842;389183105
+Production of Electricity from Solar PV;operational_expenditure;2.610804238277507;10160809;389183105
+Production of Electricity from Concentrated Solar Power;operational_expenditure;0.7919038520441426;3081956;389183105
+Production of Electricity from Wind Power;operational_expenditure;38.00714088038328;147917371;389183105
+Production of Electricity from Hydropower;operational_expenditure;4.586831435038785;17851173;389183105
+Production of Electricity from Bioenergy (Biomass, Biogas and Biofuels);operational_expenditure;0.5440857973523799;2117490;389183105
+Transmission and Distribution of Electricity;operational_expenditure;0.46680880456000273;1816741;389183105
+Construction, Extension and Operation of Water Collection, Treatment and Supply Systems;operational_expenditure;1.071922944856509;4171743;389183105
+Construction, Extension and Operation of Wastewater Collection and Treatment;operational_expenditure;1.8435224725389867;7174678;389183105
+Separate Collection and Transport of Non-Hazardous Waste in Source Segregated Fractions;operational_expenditure;0.3211770973459909;1249967;389183105
+Transport By Motorbikes, Passenger Cars and Commercial Vehicles;operational_expenditure;0.04368868992912732;170029;389183105
+Infrastructure for Personal Mobility, Cycle Logistics;operational_expenditure;0.00026157353361986257;1018;389183105
+Infrastructure for Rail Transport;operational_expenditure;3.107214533374978;12092754;389183105
+Infrastructure Enabling Low Carbon Road Transport and Public Transport;operational_expenditure;6.806307277907144;26488998;389183105
+Construction of New Buildings - Construction;operational_expenditure;1.289687279718887;5019245;389183105
+Building Renovation;operational_expenditure;0.27733038411315414;1079323;389183105
+Installation, Maintenance and Repair of Energy Efficiency Equipment;operational_expenditure;0.010243764307291809;39867;389183105
+Installation, Maintenance and Repair of Charging Stations for Electric Vehicles in Buildings (and Parking Spaces Attached to Buildings);operational_expenditure;0.014578227901234305;56736;389183105
+Installation, Maintenance and Repair of Renewable Energy Technologies;operational_expenditure;0.20294663099519697;789834;389183105
+Professional Services Related to Energy Performance of Buildings;operational_expenditure;0.017663665024718892;68744;389183105
+Existing Forest Management;operational_expenditure;0.01451681721897974;56497;389183105
+Renewal of Water Collection, Treatment, and Supply Systems;operational_expenditure;0.5725657078562031;2228329;389183105
+Renewal of Wastewater Collection and Treatment;operational_expenditure;9.507093068698345e-06;37;389183105
+Material Recovery from Non-Hazardous Waste;operational_expenditure;0.043546083533096844;169474;389183105
+Low Carbon Airport Infrastructure;operational_expenditure;0.0036288831191682892;14123;389183105
+Acquisition and Ownership of Buildings;operational_expenditure;0.046915705654797114;182588;389183105
+Close to Market Research, Development, and Innovation;operational_expenditure;0.45036564472653556;1752747;389183105
